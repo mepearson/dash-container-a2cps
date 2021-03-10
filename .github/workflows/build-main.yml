@@ -24,9 +24,9 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v3
         name: Build & push commit tagged Docker image
         with:
-          image: ${{ env.DOCKERHUB_REPO }}
+          image: ${{ secrets.DOCKERHUB_REPO }}
           tag: latest 
           registry: docker.io
           dockerfile: Dockerfile
-          username: ${{ env.DOCKERHUB_USERNAME }}
-          password: ${{ env.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
