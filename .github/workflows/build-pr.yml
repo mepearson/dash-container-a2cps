@@ -1,7 +1,7 @@
 name: Build container on pull request
 on:
   pull_request:
-    branches: [ ** ]
+    branches: [ '**' ]
 
 jobs:
   build_commit:
